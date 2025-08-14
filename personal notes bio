@@ -1,0 +1,19 @@
+A simple yet powerful Flask-based Notes Web Application where you can add, edit, and delete notes with flash message alerts for better user experience.
+Built with ❤️ using Python (Flask), SqlLite, HTML, CSS, and a sprinkle of ChatGPT magic.
+
+
+
+notes-app/
+│
+├── static/
+│   └── style.css        # Stylesheet (designed with ChatGPT's help)
+│
+├── templates/
+│   ├── home.html        # Homepage with list of notes
+│   ├── add_note.html    # Add note page
+│   ├── edit_note.html   # Edit note page
+│
+├── app.py               # Main Flask application
+├── models.py            # Database models
+├── requirements.txt     # Python dependencies
+└── README.md            # Project documentation
