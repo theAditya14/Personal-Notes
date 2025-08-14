@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Note</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Edit Note</h2>
+    
+            {% with messages = get_flashed_messages(with_categories=true) %}
+               {% if messages %}
+               <div class="flash-messages">
+                   {% for category, message in messages %}
+                     <p class="{{ category }}">{{ message }}</p>
+                   {% endfor %}
+               </div>
+               {% endif %}
+            {% endwith %}
+    <form method="post">
+        <label>Title:</label>
+        <input type="text" name="title" placeholder="Enter note title" required>
+
+        <label>Content:</label>
+        <textarea name="content" rows="5" placeholder="Enter note content" required></textarea>
+
+        <button type="submit">Edit Note</button>
+    </form>
+</div>
+
+</body>
+</html>
